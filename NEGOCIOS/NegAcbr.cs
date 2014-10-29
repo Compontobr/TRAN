@@ -203,7 +203,6 @@ namespace NEGOCIOS
             );
         }
 
-
         public string CTe_LoadfromFile(string cNomeArq, Int32 nSegundos)
         {
             return
