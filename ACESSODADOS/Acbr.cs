@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 
 namespace ACESSODADOS
@@ -14,15 +13,15 @@ namespace ACESSODADOS
         public string EnviarComandoAcbrTxt(string strComando, string strPathEntrada, string strPathSaida)
         {
             //escreve o comando no arquivo de entrada
-            System.IO.File.WriteAllText(strPathEntrada, strComando);
+            new Arquivo().EscreverArquivoTexto(strPathEntrada, strComando);
 
             //fica em looping até que o arquivo de saída exista
-            while (!System.IO.File.Exists(strPathSaida)) { }
+            while (!new Arquivo().ArquivoExiste(strPathSaida)) { }
 
             try
             {
                 //retorna resposta escrita no arquivo de saída
-                return System.IO.File.ReadAllText(strPathSaida, Encoding.UTF8);
+                return new Arquivo().LerArquivoTexto(strPathSaida);
 
             }
             catch (System.IO.FileLoadException Erro)
@@ -33,11 +32,11 @@ namespace ACESSODADOS
             finally
             {
                 //apaga o arquivo de saída
-                System.IO.File.Delete(strPathSaida);
+                new Arquivo().ApagarArquivo(strPathSaida);
             }
 
         }
-        
+
 
     }
 }
