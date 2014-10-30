@@ -39,9 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Certificado.cs" />
-    <Compile Include="CTE.cs" />
+    <Compile Include="NegCertificado.cs" />
+    <Compile Include="NegCTE.cs" />
     <Compile Include="NegAcbr.cs" />
+    <Compile Include="NegNfe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +50,165 @@
       <Project>{ab663adf-6d99-4a3c-8629-935774270e28}</Project>
       <Name>ACESSODADOS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OBJTRANSFERENCIA\OBJTRANSFERENCIA.csproj">
+      <Project>{481c1ee6-7a00-43ae-81ab-8526a36db0a6}</Project>
+      <Name>OBJTRANSFERENCIA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CteXsds\cancCTeTiposBasico_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\consReciCTeTiposBasico_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\consReciCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\consSitCTeTiposBasico_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\consSitCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\consStatServCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\consStatServTiposBasico_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\cteModalAereo_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\cteModalAquaviario_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\cteModalDutoviario_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\cteModalFerroviario_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\cteModalRodoviario_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\cteMultiModal_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\cteTiposBasico_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\cte_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\enviCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\evCancCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\evCCeCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\eventoCTeTiposBasico_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\eventoCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\evEPECCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\evRegMultimodal_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\inutCTeTiposBasico_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\inutCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\procCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\procEventoCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\procInutCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\retConsReciCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\retConsSitCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\retConsStatServCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\retEnviCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\retEventoCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\retInutCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\tiposGeralCTe_v2.00.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CteXsds\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="03\35111045237724000191550010001794331305624120-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794341110812332-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794351182343166-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794361168632897-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794371980440694-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794381164271169-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794391231422604-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794401298773027-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794411755350333-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794421242652504-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794431922221052-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794441946084397-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794451631231684-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794461243161023-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794471273869099-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794481888526131-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794491263426784-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794501227292480-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794511249823060-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794521378731020-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794531140678192-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794541292571371-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794551216281357-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794561244501525-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794571766814743-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794581273411053-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794591317113009-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794601226072351-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794611148672152-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794621171832435-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794631228252731-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794641723320565-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794651191194320-nfe.xml" />
+    <Content Include="03\35111045237724000191550010001794661680417559-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561591729028284-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561601698229640-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561611323682986-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561621146531040-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561631299841263-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561641690715740-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561651935418650-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561661163297679-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561671284557008-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561681224861867-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561691204618204-nfe.xml" />
+    <Content Include="03\35111045237724000353550010000561701110331492-nfe.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

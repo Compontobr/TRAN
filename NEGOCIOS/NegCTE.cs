@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace NEGOCIOS
 {
-    public class CTE
+    public class NegCTE
     {
-
-
+        
 
 
     }
