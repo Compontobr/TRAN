@@ -16,7 +16,8 @@ namespace APRESENTACAO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaTeste());
+            Application.Run(new TelaPrincipal());
+
         }
     }
 }

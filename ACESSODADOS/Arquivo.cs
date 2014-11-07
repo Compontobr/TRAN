@@ -15,6 +15,10 @@ namespace ACESSODADOS
         {
             File.WriteAllText(strPathArquivo, strTextoConteudo);
         }
+        public void ConcatenarArquivoTexto(string strPathArquivo, string strTextoConteudo)
+        {
+            File.AppendAllText(strPathArquivo, strTextoConteudo);
+        }
         public void EscreverArquivoBytes(string strPathArquivo, byte[] btTextoConteudo)
         {
             File.WriteAllBytes(strPathArquivo, btTextoConteudo);
@@ -54,7 +58,40 @@ namespace ACESSODADOS
             xmlDoc = new XmlDocument();
             xmlDoc.Save(strPathArquivo);
         }
+        public void CriarDiretorio(string strPath)
+        {
+            Directory.CreateDirectory(strPath);
+        }
+        public void EscreverArquivoLogErros(string strMensagem)
+        {
+            string strPathDiretorioLogCombrTran = @"C://CombrTran";
+            string strPathArquivo = strPathDiretorioLogCombrTran + @"//" + "LogErros.txt";
 
+            if (!DiretorioExiste(strPathDiretorioLogCombrTran))
+            {
+                CriarDiretorio(strPathDiretorioLogCombrTran);
+
+            }
+            else
+            {
+                if (!ArquivoExiste(strPathArquivo))
+                {
+                    EscreverArquivoTexto(strPathArquivo, strMensagem);
+                }
+                else
+                {
+                    ConcatenarArquivoTexto(
+                        strPathArquivo,
+                        Environment.NewLine +
+                        Environment.NewLine +
+                        "###############################" +
+                        Environment.NewLine +
+                        Environment.NewLine +
+                        strMensagem);
+
+                }
+            }
+        }
 
     }
 }

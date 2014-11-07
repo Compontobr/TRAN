@@ -44,14 +44,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConexaoBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConexaoBanco.Designer.cs">
+      <DependentUpon>ConexaoBanco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPrincipal.Designer.cs">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaTeste.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TelaTeste.Designer.cs">
       <DependentUpon>TelaTeste.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConexaoBanco.resx">
+      <DependentUpon>ConexaoBanco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,6 +76,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaTeste.resx">
       <DependentUpon>TelaTeste.cs</DependentUpon>
     </EmbeddedResource>
