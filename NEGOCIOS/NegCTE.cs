@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace NEGOCIOS
 {
-    public class NegCTE
+    public class NegCte
     {
-        
-
 
     }
 }

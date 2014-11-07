@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NegCertificado.cs" />
-    <Compile Include="NegCTE.cs" />
+    <Compile Include="NegCte.cs" />
     <Compile Include="NegAcbr.cs" />
     <Compile Include="NegNfe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
